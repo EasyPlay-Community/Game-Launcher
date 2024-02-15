@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Launcher v2", "Launcher v2\Launcher v2.csproj", "{6B220888-A64E-45A5-B00F-60BBC632B209}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGL", "Launcher v2\MGL.csproj", "{6B220888-A64E-45A5-B00F-60BBC632B209}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{6DBF2D6E-560E-4B31-ABE4-ADF47BCBBF0D}"
 EndProject
@@ -27,5 +27,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6691084-D86A-4CC4-8D77-99E1101874B0}
 	EndGlobalSection
 EndGlobal

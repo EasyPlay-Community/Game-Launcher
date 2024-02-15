@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MGL;
+using System;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -21,7 +22,8 @@ namespace TempWinFormProject
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Launcher_v2.Form1());
+                Application.Run(new MGL.Main());
+                //Application.Run(new OfflineMode());
             }
             else
             {
