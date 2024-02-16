@@ -142,4 +142,7 @@
   <data name="foo_sicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\foo'sicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bg_offline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg_offline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

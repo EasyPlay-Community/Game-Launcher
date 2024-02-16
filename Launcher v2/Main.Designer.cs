@@ -308,7 +308,6 @@ namespace MGL
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Consolas", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button8.ForeColor = System.Drawing.Color.Transparent;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.Location = new System.Drawing.Point(785, 460);
             this.button8.Name = "button8";
             this.button8.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -409,9 +408,9 @@ namespace MGL
             // 
             this.progressBar1.ForeColor = System.Drawing.Color.Transparent;
             this.progressBar1.Location = new System.Drawing.Point(42, 502);
+            this.progressBar1.MarqueeAnimationSpeed = 10;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(698, 8);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 18;
             // 
             // pictureBox1
@@ -703,14 +702,16 @@ namespace MGL
             this.button11.BackColor = System.Drawing.Color.Transparent;
             this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.Transparent;
             this.button11.Image = global::MGL.Properties.Resources.foo_sicon;
             this.button11.Location = new System.Drawing.Point(955, 431);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(24, 24);
             this.button11.TabIndex = 106;
-            this.button11.UseVisualStyleBackColor = false;
+            this.button11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             this.button11.MouseEnter += new System.EventHandler(this.button11_MouseEnter);
             this.button11.MouseLeave += new System.EventHandler(this.button11_MouseLeave);

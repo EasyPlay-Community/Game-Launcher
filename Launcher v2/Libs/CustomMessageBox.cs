@@ -44,26 +44,35 @@ namespace CustomMessageBox
             // 
             // yesButton
             // 
+            this.yesButton.BackColor = System.Drawing.Color.Transparent;
+            this.yesButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.yesButton.ForeColor = System.Drawing.Color.LightGray;
             this.yesButton.Location = new System.Drawing.Point(11, 123);
             this.yesButton.Name = "yesButton";
             this.yesButton.Size = new System.Drawing.Size(75, 23);
             this.yesButton.TabIndex = 0;
             this.yesButton.Text = "Да";
+            this.yesButton.UseVisualStyleBackColor = false;
             this.yesButton.Click += new System.EventHandler(this.YesButton_Click);
             // 
             // noButton
             // 
+            this.noButton.BackColor = System.Drawing.Color.Transparent;
+            this.noButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.noButton.ForeColor = System.Drawing.Color.LightGray;
             this.noButton.Location = new System.Drawing.Point(176, 123);
             this.noButton.Name = "noButton";
             this.noButton.Size = new System.Drawing.Size(75, 23);
             this.noButton.TabIndex = 1;
             this.noButton.Text = "Нет";
+            this.noButton.UseVisualStyleBackColor = false;
             this.noButton.Click += new System.EventHandler(this.NoButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(8, 9);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -76,18 +85,24 @@ namespace CustomMessageBox
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.LightGray;
             this.button1.Location = new System.Drawing.Point(92, 68);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "Discord";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CustomDialog
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackgroundImage = global::MGL.Properties.Resources.bg_offline;
             this.ClientSize = new System.Drawing.Size(263, 158);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);

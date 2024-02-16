@@ -204,6 +204,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\bg_offline.png" />
     <None Include="Resources\foo%27sicon.png" />
     <None Include="Resources\foo%27sicon1.png" />
     <None Include="Resources\Bg.png" />

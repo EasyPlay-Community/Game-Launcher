@@ -45,16 +45,11 @@ namespace MGL
             button6.FlatStyle = FlatStyle.Flat;
             button7.FlatAppearance.BorderSize = 0;
             button7.FlatStyle = FlatStyle.Flat;
-            //button8.FlatAppearance.BorderSize = 0;
-            //button8.FlatStyle = FlatStyle.Flat;
             button9.FlatAppearance.BorderSize = 0;
             button9.FlatStyle = FlatStyle.Flat;
             button10.FlatAppearance.BorderSize = 0;
             button10.FlatStyle = FlatStyle.Flat;
-            button11.FlatAppearance.BorderSize = 0;
-            button11.FlatStyle = FlatStyle.Flat;
             label22.Text = "Проверка доступных обновлений...";
-
         }
         #endregion
 
@@ -109,16 +104,16 @@ namespace MGL
             //Путь к дирректории лаунчера
             string BasePath = AppDomain.CurrentDomain.BaseDirectory;
 
-            // Получаем текущую версию игры из файла version
+            // Получаем текущую версию игры из файла GameVersion
             string currentGameVersion = File.ReadAllText(BasePath + "GameVersion");
             // Получаем текущую версию игры из файла Foo'sVersion
             string currentFooVersion = File.ReadAllText(BasePath + "Foo'sVersion");
 
-            // Проверяем последний релиз Игры на GitHub
+            // Проверяем последний релиз Mindustry на GitHub
             CheckGithubMindustry githubCheckerMindustry = new CheckGithubMindustry();
             string latestGameVersion = githubCheckerMindustry.CheckLatestRelease();
 
-            // Проверяем последний релиз Игры на GitHub
+            // Проверяем последний релиз Foo's на GitHub
             CheckGithubFooClient githubCheckerFoo = new CheckGithubFooClient();
             string latestFooVersion = githubCheckerFoo.CheckLatestRelease();
 
@@ -178,7 +173,7 @@ namespace MGL
                 File.WriteAllText(BasePath + "GameVersion", latestGameVersion);
             }
 
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             if (currentFooVersion != latestFooVersion)
             {
                 downloadLbl.ForeColor = textColorDwnld;
@@ -229,12 +224,13 @@ namespace MGL
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             //this.Size = new Size(175, 125);
-
             downloadLbl.Visible = true;
             button8.Enabled = false;
             button4.Enabled = false;
             button10.Enabled = false;
+            button11.Enabled = false;
             label22.Visible = false;
+            progressBar1.ForeColor = Color.Blue;
             progressBar1.Value = e.ProgressPercentage;
             label19.Text = (e.ProgressPercentage.ToString() + "%");
         }
@@ -245,7 +241,7 @@ namespace MGL
         {
             this.Invalidate();
             timer1.Enabled = true;
-            timer1.Interval = 5;
+            timer1.Interval = 1;
             progressBar1.Maximum = 100;
             progressBar1.Value = 0;
             button5.Enabled = true;
@@ -282,6 +278,7 @@ namespace MGL
                 downloadLbl.Visible = true;
                 label3.Visible = false;
                 button8.Enabled = true;
+                button11.Enabled = true;
                 button4.Enabled = true;
             }
             else
@@ -290,6 +287,7 @@ namespace MGL
                 label3.Visible = true;
                 progressBar1.Value++;
                 button8.Enabled = false;
+                button11.Enabled = false;
                 button4.Enabled = false;
             }
         }
@@ -520,7 +518,7 @@ namespace MGL
             try
             {
                 Ping ping = new Ping();
-                PingReply reply = ping.Send(@"update.easyplay.su");
+                PingReply reply = ping.Send(@"update.easyplay.su1");
                 status = reply.Status;
             }
             catch { }

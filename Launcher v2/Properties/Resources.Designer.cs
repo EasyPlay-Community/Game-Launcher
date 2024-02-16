@@ -73,6 +73,16 @@ namespace MGL.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg_offline {
+            get {
+                object obj = ResourceManager.GetObject("bg_offline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap foo_sicon {
             get {
                 object obj = ResourceManager.GetObject("foo_sicon", resourceCulture);
