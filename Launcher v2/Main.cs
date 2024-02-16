@@ -518,7 +518,7 @@ namespace MGL
             try
             {
                 Ping ping = new Ping();
-                PingReply reply = ping.Send(@"update.easyplay.su1");
+                PingReply reply = ping.Send(@"update.easyplay.su");
                 status = reply.Status;
             }
             catch { }
