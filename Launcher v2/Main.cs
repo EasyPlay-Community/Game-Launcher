@@ -560,6 +560,8 @@ namespace MGL
             t.SetToolTip(button5, "Закрыть лаунчер");
             t.SetToolTip(pictureBox6, "Статус подключения к серверу обновлений.");
             t.SetToolTip(label18, "Ping до серверов EasyPlay.su");
+            t.SetToolTip(button11, "Foo's Client Mindustry");
+            t.SetToolTip(button8, "Original Client Mindustry");
         }
         #endregion
 
@@ -604,15 +606,17 @@ namespace MGL
         #region -- Кнопка Сайт --
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Вы хотите перейти перейти на сайт?", "Подтвердите действие!", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                System.Diagnostics.Process.Start("https://easyplay.su/");
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //
-            }
+            System.Diagnostics.Process.Start("https://easyplay.su/");
+
+            //DialogResult dialogResult = MessageBox.Show("Вы хотите перейти перейти на сайт?", "Подтвердите действие!", MessageBoxButtons.YesNo);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+            //    System.Diagnostics.Process.Start("https://easyplay.su/");
+            //}
+            //else if (dialogResult == DialogResult.No)
+            //{
+            //    //
+            //}
         }
         private void button3_MouseEnter(object sender, EventArgs e)
         {
@@ -630,15 +634,17 @@ namespace MGL
         #region -- Кнопка Discord --
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Вы хотите перейти в Discord EasyPlay?", "Подтвердите действие!", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                System.Diagnostics.Process.Start("https://ds.easyplay.su/");
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //
-            }
+            System.Diagnostics.Process.Start("https://ds.easyplay.su/");
+
+            //DialogResult dialogResult = MessageBox.Show("Вы хотите перейти в Discord EasyPlay?", "Подтвердите действие!", MessageBoxButtons.YesNo);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+            //    System.Diagnostics.Process.Start("https://ds.easyplay.su/");
+            //}
+            //else if (dialogResult == DialogResult.No)
+            //{
+            //    //
+            //}
         }
         private void button2_MouseEnter(object sender, EventArgs e)
         {
@@ -847,15 +853,17 @@ namespace MGL
         #region -- Кнопка GitHub --
         private void button9_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Вы хотите перейти перейти в GitHub?", "Подтвердите действие!", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                System.Diagnostics.Process.Start("https://github.com/EasyPlay-Community/Game-Launcher");
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //
-            }
+            System.Diagnostics.Process.Start("https://github.com/EasyPlay-Community/Game-Launcher");
+
+            //DialogResult dialogResult = MessageBox.Show("Вы хотите перейти перейти в GitHub?", "Подтвердите действие!", MessageBoxButtons.YesNo);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+            //    System.Diagnostics.Process.Start("https://github.com/EasyPlay-Community/Game-Launcher");
+            //}
+            //else if (dialogResult == DialogResult.No)
+            //{
+            //    //
+            //}
         }
         private void button9_MouseEnter(object sender, EventArgs e)
         {
@@ -913,17 +921,6 @@ namespace MGL
             {
                 //
             }
-        }
-        private void button11_MouseEnter(object sender, EventArgs e)
-        {
-            button11.FlatAppearance.BorderSize = 1;
-            button11.FlatStyle = FlatStyle.Popup;
-        }
-
-        private void button11_MouseLeave(object sender, EventArgs e)
-        {
-            button11.FlatAppearance.BorderSize = 0;
-            button11.FlatStyle = FlatStyle.Flat;
         }
         #endregion
 

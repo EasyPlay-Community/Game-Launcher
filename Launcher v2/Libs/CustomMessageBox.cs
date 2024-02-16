@@ -1,6 +1,5 @@
 ﻿using MGL;
 using System;
-using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -36,6 +35,7 @@ namespace CustomMessageBox
         #region -- Custom Box --
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomDialog));
             this.yesButton = new System.Windows.Forms.Button();
             this.noButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -101,15 +101,22 @@ namespace CustomMessageBox
             // CustomDialog
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::MGL.Properties.Resources.bg_offline;
             this.ClientSize = new System.Drawing.Size(263, 158);
+            this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.yesButton);
             this.Controls.Add(this.noButton);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "CustomDialog";
+            this.Opacity = 0.97D;
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Внимание!";
             this.ResumeLayout(false);
@@ -140,15 +147,17 @@ namespace CustomMessageBox
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Вы хотите перейти перейти в Discord?", "Подтвердите действие!", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                System.Diagnostics.Process.Start("https://ds.easyplay.su/");
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //
-            }
+            System.Diagnostics.Process.Start("https://ds.easyplay.su/");
+            
+            //DialogResult dialogResult = MessageBox.Show("Вы хотите перейти перейти в Discord?", "Подтвердите действие!", MessageBoxButtons.YesNo);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+            //    System.Diagnostics.Process.Start("https://ds.easyplay.su/");
+            //}
+            //else if (dialogResult == DialogResult.No)
+            //{
+            //    //
+            //}
         }
         #endregion
     }
