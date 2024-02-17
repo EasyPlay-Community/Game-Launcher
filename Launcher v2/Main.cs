@@ -20,6 +20,10 @@ namespace MGL
     public partial class Main : Form
     {
         #region -- Инициализировать компоненты --
+
+        private bool soundEnabled = false;
+
+
         public Main()
         {
             InitializeComponent();
@@ -563,6 +567,12 @@ namespace MGL
             t.SetToolTip(button11, "Foo's Client Mindustry");
             t.SetToolTip(button8, "Original Client Mindustry");
         }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            webBrowser1.Document.InvokeScript("eval", new object[] { "document.querySelector('video').volume = 0;" });
+        }
+
         #endregion
 
         #region -- Кнопки --
@@ -815,7 +825,7 @@ namespace MGL
                 if (Directory.Exists(dirName) && File.Exists(dirName1) == true)
                 {
                     Process.Start(Application.StartupPath + "//Mindustry//Mindustry.exe");
-                    Application.Exit();
+                    //Application.Exit();
                 }
                 else
                 {
@@ -895,7 +905,7 @@ namespace MGL
                     if (Directory.Exists(dirName) && File.Exists(dirName1) == true)
                     {
                         Process.Start(Application.StartupPath + "//Mindustry//Foo'sClient//Mindustry.exe");
-                        Application.Exit();
+                        //Application.Exit();
                     }
                     else
                     {
@@ -920,6 +930,26 @@ namespace MGL
             else if (dialogResult == DialogResult.No)
             {
                 //
+            }
+        }
+        #endregion
+
+        #region -- Вкл\Выкл звук --
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (soundEnabled)
+            {
+                // Отключить звук
+                soundEnabled = false;
+                button12.Image = global::MGL.Properties.Resources.Sound_Off;
+                webBrowser1.Document.InvokeScript("eval", new object[] { "document.querySelector('video').volume = 0;"});
+            }
+            else
+            {
+                // Включить звук
+                soundEnabled = true;
+                button12.Image = global::MGL.Properties.Resources.Sound_On;
+                webBrowser1.Document.InvokeScript("eval", new object[] { "document.querySelector('video').volume = 0.1;" });
             }
         }
         #endregion

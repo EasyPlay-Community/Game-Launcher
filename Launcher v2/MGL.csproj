@@ -204,16 +204,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\Sound-On.png" />
+    <None Include="Resources\Sound-Off.png" />
     <None Include="Resources\bg_offline.png" />
     <None Include="Resources\foo%27sicon.png" />
-    <None Include="Resources\foo%27sicon1.png" />
     <None Include="Resources\Bg.png" />
     <None Include="Resources\a_g.png" />
-    <None Include="Resources\a-g.png" />
-    <None Include="Resources\a-g1.png" />
-    <None Include="Resources\admin.png" />
     <None Include="Resources\Scs.png" />
-    <None Include="Resources\alpha-cell.png" />
     <None Include="Resources\Soffline.png" />
     <None Include="Resources\Sonline.png" />
     <None Include="Resources\waiting.png" />

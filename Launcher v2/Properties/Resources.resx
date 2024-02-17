@@ -145,4 +145,10 @@
   <data name="bg_offline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bg_offline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sound_Off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sound-Off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sound_On" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sound-On.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
